@@ -1,0 +1,165 @@
+ERROR - 2026-09-01 09:35:12 --> Table 'users' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(150) NOT NULL UNIQUE,
+	`password` VARCHAR(255) NOT NULL,
+	`role` ENUM(\'student\',\'instructor\',\'admin\') NOT NULL DEFAULT \'student\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(150) NOT NULL UNIQUE,
+	`password` VARCHAR(255) NOT NULL,
+	`role` ENUM(\'student\',\'instructor\',\'admin\') NOT NULL DEFAULT \'student\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(150) NOT NULL UNIQUE,
+	`password` VARCHAR(255) NOT NULL,
+	`role` ENUM(\'student\',\'instructor\',\'admin\') NOT NULL DEFAULT \'student\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `users` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(150) NOT NULL,
+	`email` VARCHAR(150) NOT NULL UNIQUE,
+	`password` VARCHAR(255) NOT NULL,
+	`role` ENUM(\'student\',\'instructor\',\'admin\') NOT NULL DEFAULT \'student\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-08-29-022848_CreateUsersTable.php(45): CodeIgniter\Database\Forge->createTable('users')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateUsersTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 09:42:00 --> Table 'lms_tanandato.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:42:00\',\'admin@lms.test\',\'Admin User\',\'$2y$10$drs8hBkpX/8RZWk19TD9Ueh3qFKPnzHtKzB2Bvy1KYBKR4zlQXUgS\',\'admin\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$xg1FhPEZRY6hmP7mhA8MnekFY2gh3BzVb0oRjgIC/NUTO0s5fRerG\',\'instructor\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student1@lms.test\',\'Student One\',\'$2y$10$HYxL.AT5HLR3vQq5qQNjWe/VmkCvgG4iI52rCQ14MPFONXg9OGNHG\',\'student\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student2@lms.test\',\'Student Two\',\'$2y$10$i7BbLbKd6XPC9StSZjnb0esyxthzQFyw0OgXHnVOnZqHbdqtI1RVe\',\'student\',\'2026-09-01 09:42:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:42:00\',\'admin@lms.test\',\'Admin User\',\'$2y$10$drs8hBkpX/8RZWk19TD9Ueh3qFKPnzHtKzB2Bvy1KYBKR4zlQXUgS\',\'admin\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$xg1FhPEZRY6hmP7mhA8MnekFY2gh3BzVb0oRjgIC/NUTO0s5fRerG\',\'instructor\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student1@lms.test\',\'Student One\',\'$2y$10$HYxL.AT5HLR3vQq5qQNjWe/VmkCvgG4iI52rCQ14MPFONXg9OGNHG\',\'student\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student2@lms.test\',\'Student Two\',\'$2y$10$i7BbLbKd6XPC9StSZjnb0esyxthzQFyw0OgXHnVOnZqHbdqtI1RVe\',\'student\',\'2026-09-01 09:42:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:42:00\',\'admin@lms.test\',\'Admin User\',\'$2y$10$drs8hBkpX/8RZWk19TD9Ueh3qFKPnzHtKzB2Bvy1KYBKR4zlQXUgS\',\'admin\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$xg1FhPEZRY6hmP7mhA8MnekFY2gh3BzVb0oRjgIC/NUTO0s5fRerG\',\'instructor\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student1@lms.test\',\'Student One\',\'$2y$10$HYxL.AT5HLR3vQq5qQNjWe/VmkCvgG4iI52rCQ14MPFONXg9OGNHG\',\'student\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student2@lms.test\',\'Student Two\',\'$2y$10$i7BbLbKd6XPC9StSZjnb0esyxthzQFyw0OgXHnVOnZqHbdqtI1RVe\',\'student\',\'2026-09-01 09:42:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:42:00\',\'admin@lms.test\',\'Admin User\',\'$2y$10$drs8hBkpX/8RZWk19TD9Ueh3qFKPnzHtKzB2Bvy1KYBKR4zlQXUgS\',\'admin\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$xg1FhPEZRY6hmP7mhA8MnekFY2gh3BzVb0oRjgIC/NUTO0s5fRerG\',\'instructor\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student1@lms.test\',\'Student One\',\'$2y$10$HYxL.AT5HLR3vQq5qQNjWe/VmkCvgG4iI52rCQ14MPFONXg9OGNHG\',\'student\',\'2026-09-01 09:42:00\'), (\'2026-09-01 09:42:00\',\'student2@lms.test\',\'Student Two\',\'$2y$10$i7BbLbKd6XPC9StSZjnb0esyxthzQFyw0OgXHnVOnZqHbdqtI1RVe\',\'student\',\'2026-09-01 09:42:00\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(46): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 09:44:24 --> Table 'lms_tanandato.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:44:24\',\'admin@lms.test\',\'Admin User\',\'$2y$10$nS1AUy3gDATprkIryebRIeAJTvmz0nREXMq44GnAX8U7zbVlA1CHC\',\'admin\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$pVUSV0uW4AiRuZBmgS/ePeBsyTkugeiZGfWYPAJN.v.QXFfo.FoF.\',\'instructor\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student1@lms.test\',\'Student One\',\'$2y$10$7DNTNRLivpE8m1iY7bqjxeML9d5f5Hl7.538EP7HI5Fxa3Lk1hvou\',\'student\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student2@lms.test\',\'Student Two\',\'$2y$10$J/FH8pZUnqlwxDj09fHPIefhcumlWz67huYpKCppgMWeLJLNzGpd6\',\'student\',\'2026-09-01 09:44:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:44:24\',\'admin@lms.test\',\'Admin User\',\'$2y$10$nS1AUy3gDATprkIryebRIeAJTvmz0nREXMq44GnAX8U7zbVlA1CHC\',\'admin\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$pVUSV0uW4AiRuZBmgS/ePeBsyTkugeiZGfWYPAJN.v.QXFfo.FoF.\',\'instructor\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student1@lms.test\',\'Student One\',\'$2y$10$7DNTNRLivpE8m1iY7bqjxeML9d5f5Hl7.538EP7HI5Fxa3Lk1hvou\',\'student\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student2@lms.test\',\'Student Two\',\'$2y$10$J/FH8pZUnqlwxDj09fHPIefhcumlWz67huYpKCppgMWeLJLNzGpd6\',\'student\',\'2026-09-01 09:44:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:44:24\',\'admin@lms.test\',\'Admin User\',\'$2y$10$nS1AUy3gDATprkIryebRIeAJTvmz0nREXMq44GnAX8U7zbVlA1CHC\',\'admin\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$pVUSV0uW4AiRuZBmgS/ePeBsyTkugeiZGfWYPAJN.v.QXFfo.FoF.\',\'instructor\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student1@lms.test\',\'Student One\',\'$2y$10$7DNTNRLivpE8m1iY7bqjxeML9d5f5Hl7.538EP7HI5Fxa3Lk1hvou\',\'student\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student2@lms.test\',\'Student Two\',\'$2y$10$J/FH8pZUnqlwxDj09fHPIefhcumlWz67huYpKCppgMWeLJLNzGpd6\',\'student\',\'2026-09-01 09:44:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:44:24\',\'admin@lms.test\',\'Admin User\',\'$2y$10$nS1AUy3gDATprkIryebRIeAJTvmz0nREXMq44GnAX8U7zbVlA1CHC\',\'admin\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$pVUSV0uW4AiRuZBmgS/ePeBsyTkugeiZGfWYPAJN.v.QXFfo.FoF.\',\'instructor\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student1@lms.test\',\'Student One\',\'$2y$10$7DNTNRLivpE8m1iY7bqjxeML9d5f5Hl7.538EP7HI5Fxa3Lk1hvou\',\'student\',\'2026-09-01 09:44:24\'), (\'2026-09-01 09:44:24\',\'student2@lms.test\',\'Student Two\',\'$2y$10$J/FH8pZUnqlwxDj09fHPIefhcumlWz67huYpKCppgMWeLJLNzGpd6\',\'student\',\'2026-09-01 09:44:24\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(46): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 09:53:41 --> Table 'lms_tanandato.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:53:41\',\'admin@lms.test\',\'Admin User\',\'$2y$10$1F.G4duvZ5w5G8uy3FC63.VJEvGLSxph0P50lwMHUieAaoW2fdKlm\',\'admin\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$c2ZMNYyDinX0R44zowfRCuNoqrgbZSWRFf7jbu6WOt/GVYtZAg9Ay\',\'instructor\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student1@lms.test\',\'Student One\',\'$2y$10$njpFrauPcYuAC/dTPYwWdufD74XgjSxhGnqRpjIAmhDSgKswWZ5gW\',\'student\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student2@lms.test\',\'Student Two\',\'$2y$10$eLaaIZ6r/wc2J7UGsgAS6OT7k9.ZEBflbbJJzAKlPhBTFr1s4hfOO\',\'student\',\'2026-09-01 09:53:41\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:53:41\',\'admin@lms.test\',\'Admin User\',\'$2y$10$1F.G4duvZ5w5G8uy3FC63.VJEvGLSxph0P50lwMHUieAaoW2fdKlm\',\'admin\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$c2ZMNYyDinX0R44zowfRCuNoqrgbZSWRFf7jbu6WOt/GVYtZAg9Ay\',\'instructor\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student1@lms.test\',\'Student One\',\'$2y$10$njpFrauPcYuAC/dTPYwWdufD74XgjSxhGnqRpjIAmhDSgKswWZ5gW\',\'student\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student2@lms.test\',\'Student Two\',\'$2y$10$eLaaIZ6r/wc2J7UGsgAS6OT7k9.ZEBflbbJJzAKlPhBTFr1s4hfOO\',\'student\',\'2026-09-01 09:53:41\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:53:41\',\'admin@lms.test\',\'Admin User\',\'$2y$10$1F.G4duvZ5w5G8uy3FC63.VJEvGLSxph0P50lwMHUieAaoW2fdKlm\',\'admin\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$c2ZMNYyDinX0R44zowfRCuNoqrgbZSWRFf7jbu6WOt/GVYtZAg9Ay\',\'instructor\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student1@lms.test\',\'Student One\',\'$2y$10$njpFrauPcYuAC/dTPYwWdufD74XgjSxhGnqRpjIAmhDSgKswWZ5gW\',\'student\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student2@lms.test\',\'Student Two\',\'$2y$10$eLaaIZ6r/wc2J7UGsgAS6OT7k9.ZEBflbbJJzAKlPhBTFr1s4hfOO\',\'student\',\'2026-09-01 09:53:41\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 09:53:41\',\'admin@lms.test\',\'Admin User\',\'$2y$10$1F.G4duvZ5w5G8uy3FC63.VJEvGLSxph0P50lwMHUieAaoW2fdKlm\',\'admin\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'instructor1@lms.test\',\'Instructor One\',\'$2y$10$c2ZMNYyDinX0R44zowfRCuNoqrgbZSWRFf7jbu6WOt/GVYtZAg9Ay\',\'instructor\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student1@lms.test\',\'Student One\',\'$2y$10$njpFrauPcYuAC/dTPYwWdufD74XgjSxhGnqRpjIAmhDSgKswWZ5gW\',\'student\',\'2026-09-01 09:53:41\'), (\'2026-09-01 09:53:41\',\'student2@lms.test\',\'Student Two\',\'$2y$10$eLaaIZ6r/wc2J7UGsgAS6OT7k9.ZEBflbbJJzAKlPhBTFr1s4hfOO\',\'student\',\'2026-09-01 09:53:41\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(46): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 10:05:13 --> Table 'lms_tanandato.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:05:13\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:05:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:05:13\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:05:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:05:13\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:05:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:05:13\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:05:13\'), (\'2026-09-01 10:05:13\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:05:13\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(39): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 10:14:08 --> Table 'lms_tanandato.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:14:08\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:14:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:14:08\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:14:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:14:08\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:14:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role`, `updated_at`)
+VALUES (\'2026-09-01 10:14:08\',\'admin@lms.com\',\'Admin User\',\'admin123\',\'admin\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'instructor@lms.com\',\'John Instructor\',\'instructor123\',\'instructor\',\'2026-09-01 10:14:08\'), (\'2026-09-01 10:14:08\',\'student@lms.com\',\'Jane Student\',\'student123\',\'student\',\'2026-09-01 10:14:08\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(38): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-09-01 10:15:12 --> Unknown table 'lms_tanandato.users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('DROP TABLE `users`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `users`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `users`')
+ 4 SYSTEMPATH\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `users`')
+ 5 APPPATH\Database\Migrations\2026-09-01-093849_CreateUsersTable.php(51): CodeIgniter\Database\Forge->dropTable('users')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateUsersTable->down()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress(0)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:rollback', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
